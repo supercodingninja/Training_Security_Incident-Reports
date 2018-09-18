@@ -1,0 +1,144 @@
+(function ( $ ) {
+  "use strict";
+    
+  $( document ).ready(function () 
+  {
+    // Activate cookies clicking the 'ok' button
+    $(document).on('click', '#cn-accept-cookie', function ( event ) {
+      event.preventDefault();
+            if(window.upds_accept_cookies) upds_accept_cookies('OK button');
+    });
+        
+
+        var cookiePolicyLink = $("#cn-more-info").attr('href');
+        if(cookiePolicyLink != window.location.href)
+        {            
+            // Activate cookies on page click
+      if ( cnArgs.upds_accept_on_page_click == 'yes' ) 
+      {
+              upds_log('Activating cookie acceptance on page click');
+                
+                // Activate cookies clicking the any link and or body/div
+                $('BODY, DIV, A, BUTTON').on('click', function ( event ) {
+                    //upds_log('click event', event.target);            
+                    
+                    if($(event.target).attr('id') == 'cn-accept-cookie')
+                    {
+                        if(window.upds_accept_cookies) upds_accept_cookies('Clicked the OK button');                            
+                    }
+                    else if($(event.target).attr('id') != 'cn-more-info')
+                    {
+                        if(window.upds_accept_cookies) upds_accept_cookies('A click on the page');            
+                    }
+                });
+            }
+            
+            // Activate cookies on scroll
+      if ( cnArgs.upds_accept_on_scroll == 'yes' ) 
+      {
+              upds_log('Activating cookie acceptance on page scroll');
+        $(window).on('scroll', function() { 
+          if(window.upds_accept_cookies) upds_accept_cookies('Page scrolling'); 
+        });
+      }
+            
+            // Force page refresh?
+            if(cnArgs.upds_accept_force_refresh == 'yes')
+            {
+                upds_log('==> Info: when user will accept cookies, a full page refresh will be done');
+      }            
+        
+    } // if
+        
+    
+
+    // Cookie not yet accepted: display notification box
+    // ----------------------------------------------------------------
+    if ( document.cookie.indexOf( 'cookie_notice_accepted' ) === -1 ) 
+    {
+      if ( cnArgs.hideEffect === 'fade')        { $( '#cookie-notice' ).fadeIn( 300 );    } 
+      else if ( cnArgs.hideEffect === 'slide' ) { $( '#cookie-notice' ).slideDown( 300 ); }
+      else { $( '#cookie-notice' ).show(); }
+      
+      upds_show_placeholders(window.upds_dcb_disabled != 1);
+    } 
+    else 
+    { 
+      $( '#cookie-notice' ).remove(); 
+      upds_show_placeholders(false);
+    }
+
+  }); // onReady function
+})( jQuery );
+
+
+
+
+function upds_show_placeholders(show)
+{
+  $ = window.jQuery;
+    
+  if(show)
+  {
+      upds_log('Showing placeholders tags');
+      $('.upds-no-cookie-placeholder').css('display', 'inline-block');
+  }
+  else 
+  { 
+      upds_log('Hiding placeholders tags');
+      $('.upds-no-cookie-placeholder').css('display', 'none');
+  }
+}
+
+
+function upds_accept_cookies(userAction)
+{
+  $ = window.jQuery;
+    
+    
+  // Already accepted?
+  if(upds_getCookie('cookie_notice_accepted') != '') return;
+  
+  var cnLater = new Date();
+
+  // set expiry time in seconds
+  cnLater.setTime( parseInt( (new Date()).getTime() ) + parseInt( cnArgs.cookieTime ) * 1000 );
+
+  // set cookie
+  document.cookie = cnArgs.cookieName + '=true' + ';expires=' + cnLater.toGMTString() + ';' + 
+            (cnArgs.cookieDomain !== undefined && cnArgs.cookieDomain !== '' ? 'domain=' + 
+             cnArgs.cookieDomain + ';' : '' ) + ( cnArgs.cookiePath !== undefined && cnArgs.cookiePath !== ''
+             ? 'path=' + cnArgs.cookiePath + ';' : '');
+
+  upds_log('==> ### USER ACCEPTED COOKIES ### (Action = ' + userAction + ')');
+    
+    
+    // Force page refresh?
+    if(cnArgs.upds_accept_force_refresh == 'yes')
+    {
+    upds_log('==> ### Starting a full page refresh...');
+        window.location.reload();
+        return;
+    }        
+    
+
+  // Enable cookie policy blocks
+  if(window.__cookie_policy_enable_all) 
+  {
+    window.__cookie_policy_enable_all();
+
+    // Call the custom 'onload' functon of dynamic cookie blocker (if any)
+    if(window.dcb_blocks_activated) window.dcb_blocks_activated();
+
+  } 
+
+  // hide message container
+  if ( cnArgs.hideEffect === 'fade' ) { $( '#cookie-notice' ).fadeOut( 300, function () { $( this ).remove(); } ); } 
+  else if ( cnArgs.hideEffect === 'slide' ) { $( '#cookie-notice' ).slideUp( 300, function () { $( this ).remove(); } ); } 
+  else { $( '#cookie-notice' ).remove(); }
+
+  upds_show_placeholders(false);
+      
+} // func
+
+

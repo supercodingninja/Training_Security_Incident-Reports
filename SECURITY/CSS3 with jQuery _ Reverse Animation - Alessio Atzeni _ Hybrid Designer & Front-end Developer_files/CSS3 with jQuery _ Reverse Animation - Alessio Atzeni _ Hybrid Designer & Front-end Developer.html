@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://www.alessioatzeni.com/blog/css3-with-jquery-reverse-animation/ -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-animation animated-content colorize js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths wf-brandongrotesque-n7-active wf-brandongrotesque-n3-active wf-brandongrotesque-n5-active wf-brandongrotesque-n4-active wf-futurapt-n7-active wf-futurapt-i7-active wf-futurapt-n4-active wf-futurapt-i4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- Meta Tags -->
+
+
+<!-- Mobile Specifics -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Mobile Internet Explorer ClearType Technology -->
+<!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]-->
+
+<!--Shortcut icon-->
+<link rel="shortcut icon" href="http://www.alessioatzeni.com/wp-content/themes/az/_include/img/favicon.ico">
+
+<!-- RSS & Pingbacks -->
+<link rel="alternate" type="application/rss+xml" title="Alessio Atzeni | Hybrid Designer &amp; Front-end Developer RSS Feed" href="http://www.alessioatzeni.com/feed/">
+<link rel="pingback" href="http://www.alessioatzeni.com/xmlrpc.php">
+
+<!-- TypeKit -->
+<script async="" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/analytics.js.download"></script><script type="text/javascript" async="" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/azcarbon_2_1_0_VERT"></script><script type="text/javascript" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/acq4yul.js.download"></script>
+<style type="text/css">.tk-brandon-grotesque{font-family:"brandon-grotesque",sans-serif;}.tk-futura-pt{font-family:"futura-pt",sans-serif;}</style><style type="text/css">@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/1da05b/0000000000000000000132df/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/1da05b/0000000000000000000132df/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/1da05b/0000000000000000000132df/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/8f4e31/0000000000000000000132e3/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/2f8f3d/0000000000000000000132dd/27/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/2f8f3d/0000000000000000000132dd/27/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/2f8f3d/0000000000000000000132dd/27/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:brandon-grotesque;src:url(https://use.typekit.net/af/d8f71f/0000000000000000000132e1/27/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/d8f71f/0000000000000000000132e1/27/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/d8f71f/0000000000000000000132e1/27/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;}@font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/309dfe/000000000000000000010091/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/309dfe/000000000000000000010091/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/309dfe/000000000000000000010091/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/eb729a/000000000000000000010092/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/eb729a/000000000000000000010092/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/eb729a/000000000000000000010092/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9b05f3/000000000000000000013365/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/9b05f3/000000000000000000013365/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/9b05f3/000000000000000000013365/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/cf3e4e/000000000000000000010095/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/cf3e4e/000000000000000000010095/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/cf3e4e/000000000000000000010095/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}</style><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+<!-- This site is optimized with the Yoast SEO plugin v3.8 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>CSS3 with jQuery / Reverse Animation - Alessio Atzeni | Hybrid Designer &amp; Front-end Developer</title>
+<meta name="description" content="Hello guys, this time I wanted to bump into another interesting experiment, create a reverse animation. I helped with jQuery to assign the specific class">
+<meta name="robots" content="noodp">
+<link rel="canonical" href="http://www.alessioatzeni.com/blog/css3-with-jquery-reverse-animation/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3 with jQuery / Reverse Animation - Alessio Atzeni | Hybrid Designer &amp; Front-end Developer">
+<meta property="og:description" content="Hello guys, this time I wanted to bump into another interesting experiment, create a reverse animation. I helped with jQuery to assign the specific class">
+<meta property="og:url" content="http://www.alessioatzeni.com/blog/css3-with-jquery-reverse-animation/">
+<meta property="og:site_name" content="Alessio Atzeni | Hybrid Designer &amp; Front-end Developer">
+<meta property="article:tag" content="HTML/CSS">
+<meta property="article:tag" content="jQuery">
+<meta property="article:section" content="HTML/CSS Tutorials">
+<meta property="article:published_time" content="2011-10-12T01:11:17+02:00">
+<meta property="article:modified_time" content="2014-03-09T22:52:05+02:00">
+<meta property="og:updated_time" content="2014-03-09T22:52:05+02:00">
+<meta property="og:image" content="http://www.alessioatzeni.com/wp-content/uploads/logo_az_.png">
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="400">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="stylesheet" id="cookie-notice-front-css" href="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/front.css" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="main-styles-css" href="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/style.css" type="text/css" media="all">
+<script type="text/javascript" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/jquery.js.download"></script>
+<script type="text/javascript" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/jquery-migrate.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var cnArgs = {"ajaxurl":"http:\/\/www.alessioatzeni.com\/wp-admin\/admin-ajax.php","hideEffect":"fade","upds_accept_on_scroll":"no","upds_accept_on_page_click":"yes","upds_accept_force_refresh":"yes","cookieName":"cookie_notice_accepted","cookieValue":"TRUE","cookieTime":"31536000","cookiePath":"\/","cookieDomain":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/front.js.download"></script>
+<script type="text/javascript" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/modernizr.js.download"></script>
+<link rel="https://api.w.org/" href="http://www.alessioatzeni.com/wp-json/">
+<link rel="shortlink" href="http://www.alessioatzeni.com/?p=426">
+<link rel="alternate" type="application/json+oembed" href="http://www.alessioatzeni.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.alessioatzeni.com%2Fblog%2Fcss3-with-jquery-reverse-animation%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.alessioatzeni.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.alessioatzeni.com%2Fblog%2Fcss3-with-jquery-reverse-animation%2F&amp;format=xml">
+
+        <noscript><meta http-equiv='refresh' content='0;url=/noscript.html'></noscript> 
+        <noscript><style>html { display: none; }</style></noscript>
+
+        <script>
+            function upds_log(m1, m2, m3, m4, m5) {
+                if(console && console.log) 
+					console.log('DCB: ' + m1, m2 || '', m3 || '', m4 || '', m5 || '');
+            }
+
+            function upds_getCookie(cname) 
+            {
+                var name = cname + '=';
+                var ca = document.cookie.split(';');
+                for(var i=0; i<ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1);
+                    if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+                }
+                return '';
+            }
+        </script>
+        <style>
+			span.upds_cookie_policy
+			{ 
+				width:0px; height: 0px;  margin: 0 !important; padding: 0 !important; 
+			} 
+
+			.upds-no-cookie-placeholder
+			{
+    			background-color: #eee;
+    			border: 1px solid #aaa;
+    			display: none;    
+			}
+		</style>
+<script id="_carbonads_projs" type="text/javascript" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/CKYIV23E.json"></script><style>.carbonad{background-color:#FBFBFB;border:2px solid #E8E8E8;height:215px;line-height:1.2;width:150px}.carbonad-img{float:left;height:100px;margin-left:11px;margin-top:11px;width:130px}.carbonad-text{color:#545454;float:left;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:400;height:50px;margin-left:15px;margin-top:9px;width:119px}.carbonad-text a{color:#545454;text-decoration:none;text-transform:none;}.carbonad-tag{color:#999;float:left;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:400;margin-left:17px;margin-top:15px;padding-top:5px}.carbonad-tag a{color:#999;text-align:center;text-decoration:none;font-weight:700}</style></head>
+
+<body class="single single-post postid-426 single-format-standard chrome windows wpb-js-composer js-comp-ver-3.6.2 vc_responsive">
+
+<!-- Loading -->
+<div id="loader-container">
+	<span id="loader-percentage-line">
+		<span id="loader-percentage"></span>
+	</span>
+</div>
+<!-- End Loading -->
+
+<!-- Start Wrap All -->
+<div class="wrap_all">
+
+<!-- Header -->
+<header id="menu">
+	<a id="mobile-nav" class="menu-nav dJAX_internal desktop-view" href="http://www.alessioatzeni.com/blog/css3-with-jquery-reverse-animation/#menu-pr"><span class="menu-icon"></span></a>
+	<nav id="menu-pr" class="desktop-view">
+		<ul>
+		<li><a title="About" href="http://www.alessioatzeni.com/about/" class="dJAX_internal">About<i class="about"></i></a></li>
+<li><a title="Blog" href="http://www.alessioatzeni.com/blog/" class="dJAX_internal">Blog<i class="blog"></i></a></li>
+		<li><a data-toggle="modal" href="http://www.alessioatzeni.com/blog/css3-with-jquery-reverse-animation/#" data-target="#myModal" title="Contact" class="dJAX_internal">Contact <i class="contact"></i></a></li>
+		</ul>
+	</nav>
+	<a class="logo dJAX_internal" href="http://www.alessioatzeni.com/" title="Alessio Atzeni | Hybrid Designer &amp; Front-end Developer">Alessio Atzeni</a>
+</header>
+<!-- End Header -->
+
+<!-- Loader -->
+<div class="page-bg"></div>
+<div class="page-loader"></div>
+<!-- End Loader -->
+
+<!-- Start Main -->
+<div id="main" class="ajaxable">
+<div id="content-blog-single">
+	<section id="blog">
+		<!-- Thumb -->
+		<section id="post-image-blog">       
+        <div class="post-thumb" style="background-image: url(&#39;http://www.alessioatzeni.com/wp-content/uploads/patt1.png&#39;);">
+            <div class="box-overlay">
+                <div class="post-conte-title">
+                    <h2 class="title-post">CSS3 with jQuery / Reverse Animation</h2>
+  
+                    <h3 class="date-post">October 12, 2011</h3> 
+                </div>
+            </div>
+        </div>
+    </section>
+		<!-- Thumb -->
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+			    	<!-- Article -->
+	    	
+
+<article id="post-426" class="item-blog-single post-426 post type-post status-publish format-standard has-post-thumbnail hentry category-htmlcss-tutorials tag-htmlcss tag-jquery">
+	<div class="post-container">
+		<div class="entry-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+<a class="button same-url dJAX_internal" title="View Demo CSS3 with jQuery / Reverse Animation" href="http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Reverse-Animation/index.html" target="_blank">View Demo</a>
+</div>
+<div class="col-md-6">
+<a class="button same-url dJAX_internal" target="_blank" title="Download CSS3 with jQuery / Reverse Animation" href="http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Reverse-Animation/download/source.zip">Download</a>
+</div>            </div>
+        </div>
+    </div>
+		<div class="entry-content">
+		    <p>Hello guys, this time I wanted to bump into another interesting experiment, create a reverse animation. I helped with jQuery to assign the specific class at the click of the button. In my opinion an interesting experiment, I hope you will like and find alternative paths in the realization of the same experiment with different techniques.  </p>
+<p>I remember this animations are only visible in Firefox, Safari and Chrome. </p>
+<p>Let’s start!</p>
+<h2>The Markup</h2>
+<h3>HTML</h3>
+<p>The markup is not difficult, we used two unordered lists, the first list <strong>follow</strong> insert all graphics (via CSS3) and animations, while the second list <strong>social</strong> will have links to social networks always with a nice animation.</p>
+<p>As you will see the first list is composed of lines, points and special effect, the latter two are accompanied by an control layer to adjust the delay of the animation.<br>
+While in the second list, they are also accompanied by a control layer that control the animation and delay, and a specific class that as you will see later, to determine the exact position.</p>
+<pre>&lt;div class="ID-Image"&gt;  
+  &lt;ul id="follow"&gt;  
+     &lt;li class="line1"&gt;  
+     &lt;span id="layerBall" class="ball"&gt;LINKED IN&lt;/span&gt;&lt;span id="layerPulse" class="pulse"&gt;&lt;/span&gt;  
+     &lt;/li&gt;  
+       
+     &lt;li class="line2"&gt;  
+     &lt;span id="layerBall1" class="ball1"&gt;FOORST&lt;/span&gt;&lt;span id="layerPulse1" class="pulse1"&gt;&lt;/span&gt;  
+     &lt;/li&gt;  
+          
+     &lt;li class="line3"&gt;  
+     &lt;span id="layerBall2" class="ball2"&gt;TWITTER&lt;/span&gt;&lt;span id="layerPulse2" class="pulse2"&gt;&lt;/span&gt;  
+     &lt;/li&gt;  
+          
+     &lt;li class="line4"&gt;  
+     &lt;span id="layerBall3" class="ball3"&gt;FACEBOOK&lt;/span&gt;&lt;span id="layerPulse3" class="pulse3"&gt;&lt;/span&gt;  
+     &lt;/li&gt;  
+   &lt;/ul&gt;  
+     
+   &lt;ul id="social"&gt;  
+   &lt;li id="layerSocialControl3" class="facebook"&gt;&lt;a href="#"&gt;Facebook&lt;/a&gt;&lt;/li&gt;  
+   &lt;li id="layerSocialControl2" class="twitter"&gt;&lt;a href="#"&gt;Twitter&lt;/a&gt;&lt;/li&gt;  
+   &lt;li id="layerSocialControl" class="linked"&gt;&lt;a href="#"&gt;Linked In&lt;/a&gt;&lt;/li&gt;  
+   &lt;li id="layerSocialControl1" class="forrst"&gt;&lt;a href="#"&gt;Forrst&lt;/a&gt;&lt;/li&gt;  
+   &lt;/ul&gt;  
+     
+ &lt;/div&gt;  
+&lt;a id="trigger" href="#"&gt;Follow Me!&lt;/a&gt;
+</pre>
+<h3>CSS</h3>
+<p>This first part of the CSS will make you understand how all the elements are positioned in the scene, and how to apply the animations.<br>
+Take care some classes are accompanied by a <strong>.running</strong>, it will serve with the help of jQuery to determine the start animation to the button click.</p>
+<pre><span style="color: #999;">/* CONTAINER IMAGE */</span>
+.ID-Image {
+    width: 300px;
+    height: 300px;
+    background: url(photoID.png) no-repeat;
+    margin: 150px auto 0;
+}
+
+<span style="color: #999;">/* LINE FOLLOW */</span>
+#follow {
+    list-style: none;
+    position: relative;
+    top: 140px;
+    left: 140px;
+    z-index: -1;
+}
+
+.running .line1,.running .line2,.running .line3,.running .line4 {
+    background: #2187e7;
+    width: 0px;
+    height: 1px;
+    -moz-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+
+.running .line1 {
+    -moz-transform: rotate(17deg);
+    -webkit-transform: rotate(17deg);
+    -moz-animation: move  0.65s linear forwards;
+    -webkit-animation: move  0.65s linear forwards;
+}
+
+.running .line2 {
+    -moz-transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+    -moz-animation: move1 0.75s linear forwards;
+    -webkit-animation: move1  0.75s linear forwards;
+}
+
+.running .line3 {
+    -moz-transform: rotate(235deg);
+    -webkit-transform: rotate(235deg);
+    -moz-animation: move2 0.9s linear forwards;
+    -webkit-animation: move2  0.9s linear forwards;
+}
+
+.running .line4 {
+    -moz-transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    -moz-animation: move3 0.5s linear forwards;
+    -webkit-animation: move3  0.5s linear forwards;
+}
+
+
+<span style="color: #999;">/* POINTER */</span>
+.running .ball, .running .ball1, .running .ball2, .running .ball3 {
+    background-color: #2187e7;
+    background-image: -moz-linear-gradient(90deg, #2187e7 25%, #a0eaff);
+    background-image: -webkit-linear-gradient(90deg, #2187e7 25%, #a0eaff);
+    width: 7px;
+    height: 7px;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 99;
+    -moz-transform: scale(0);
+    -moz-animation: point 0.1s linear forwards;
+    -webkit-transform: scale(0);
+    -webkit-animation: point 0.1s linear forwards;
+}
+
+<span style="color: #999;">/* SPECIAL FX*/</span>
+.running .pulse, .running .pulse1, .running .pulse2, .running .pulse3 {
+    width: 12px;
+    height: 12px;
+    border-radius: 30px;
+    border: 1px solid #00c6ff;
+    box-shadow: 0 0 5px #00c6ff;
+    position: absolute;
+    -moz-transform: scale(0);
+    -moz-animation: pulse 0.6s ease-out;
+    -webkit-transform: scale(0);
+    -webkit-animation: pulse 0.6s ease-out;
+}
+
+
+<span style="color: #999;">/* COORDINATE POINTS BALL + SPECIAL FX */</span>
+span {
+    position: absolute;
+    text-indent: -9999px;
+}
+
+.ball {
+    left: 295px;
+    top: -3px;
+}
+
+.ball1 {
+    left: 355px;
+    top: -3px;
+}
+
+.ball2 {
+    left: 200px;
+    top: -3px;
+}
+
+.ball3 {
+    left: 365px;
+    top: -3px;
+}
+
+.pulse {
+    left: 293px;
+    top: -5px;
+}
+
+.pulse1 {
+    left: 354px;
+    top: -5px;
+}
+
+.pulse2 {
+    left: 198px;
+    top: -5px;
+}
+
+.pulse3 {
+    left: 363px;
+    top: -5px;
+}
+
+
+<span style="color: #999;">/* DELAY CONTROL LAYER */</span>
+#layerBall, #layerPulse {
+    -moz-animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+}
+
+#layerBall1, #layerPulse1 {
+    -moz-animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s;
+}
+
+#layerBall2, #layerPulse2 {
+    -moz-animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+}
+
+#layerBall3, #layerPulse3 {
+    -moz-animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+}
+
+<span style="color: #999;">/* FOLLOW ME LIST */</span>
+ul#social {
+    list-style: none;
+}
+
+ul#social li {
+    position: relative;
+    background: #000000;
+    background: -moz-linear-gradient(top, #161616 0%, #000000 100%);
+    background: -webkit-linear-gradient(top, #161616 0%,#000000 100%);
+    border-left: 1px solid #111;
+    border-top: 1px solid #111;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    width: 70px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.8em;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    width: 70px;
+    opacity: 0;
+}
+
+ul#social li:hover {
+    background: -moz-linear-gradient(top, #202020 0%, #161616 100%);
+    background: -webkit-linear-gradient(top, #202020 0%, #161616 100%);
+    cursor: pointer;
+}
+
+ul#social a:hover {
+    color: #fff;
+}
+
+.running #layerSocialControl {
+    -moz-animation: tooltip 0.35s 0.55s linear forwards;
+    -webkit-animation: tooltip 0.35s 0.55s linear forwards;
+}
+
+.running #layerSocialControl1 {
+    -moz-animation: tooltip 0.35s 0.65s linear forwards;
+    -webkit-animation: tooltip 0.35s 0.65s linear forwards;
+}
+
+.running #layerSocialControl2 {
+    -moz-animation: tooltip 0.35s 0.8s linear forwards;
+    -webkit-animation: tooltip 0.35s 0.8s linear forwards;
+}
+
+.running #layerSocialControl3 {
+    -moz-animation: tooltip 0.35s 0.4s linear forwards;
+    -webkit-animation: tooltip 0.35s 0.4s linear forwards;
+}
+
+#social .facebook {
+    top: -150px;
+    left: 406px;
+}
+
+#social .twitter {
+    top: -83px;
+    left: 28px;
+}
+
+#social .linked {
+    top: 178px;
+    left: 432px;
+}
+
+#social .forrst {
+    top: 297px;
+    left: -130px;
+}
+</pre>
+<h2>CSS – Normal Animation</h2>
+<p>Here are the various animations of the class <strong>.running</strong>, nothing special at the end, are simple animations that can be achieved thanks to CSS3.</p>
+<pre><span style="color: #999;">/* ANIMATION LINE */</span>
+@-moz-keyframes move {
+    0%   { width: 0px;
+}
+
+100% {
+    width: 300px;
+    box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+}
+}
+
+@-moz-keyframes move1 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 360px;
+        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    };
+}
+
+@-moz-keyframes move2 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 205px;
+        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    };
+}
+
+@-moz-keyframes move3 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 370px;
+        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    };
+}
+
+@-webkit-keyframes move {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 300px;
+        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    };
+}
+
+@-webkit-keyframes move1 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 360px;
+        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    };
+}
+
+@-webkit-keyframes move2 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 205px;
+        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    };
+}
+
+@-webkit-keyframes move3 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 370px;
+        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    };
+}
+
+<span style="color: #999;">/* ANIMATION BALL + SPECIAL FX */</span>
+@-moz-keyframes point {
+    0%  {-moz-transform: scale(0,0);
+}
+
+100% {
+    -moz-transform: scale(1,1);
+}	
+}
+
+@-moz-keyframes pulse {
+    0% {
+        -moz-transform: scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        -moz-transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        -moz-transform: scale(1.75);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: scale(0);
+        opacity: 0;
+    };
+}
+
+@-webkit-keyframes point {
+    0% {
+        -webkit-transform: scale(0,0);
+    }
+
+    100% {
+        -webkit-transform: scale(1,1);
+    };
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        -webkit-transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        -webkit-transform: scale(1.75);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+    };
+} 
+
+<span style="color: #999;">/* ANIMATION LABEL */</span>
+@-moz-keyframes tooltip {
+    0%  { -moz-transform: scale(0,0);
+    opacity: 0;
+}
+
+50% {
+    -moz-transform: scale(1.2,1.2);
+    opacity: 0.3;
+}
+
+75% {
+    -moz-transform: scale(0.9,0.9);
+    opacity: 0.7;
+}
+
+100% {
+    -moz-transform: scale(1,1);
+    opacity: 1;
+}
+}
+
+@-webkit-keyframes tooltip {
+    0% {
+        -webkit-transform: scale(0,0);
+        opacity: 0;
+    }
+
+    50% {
+        -webkit-transform: scale(1.2,1.2);
+        opacity: 0.3;
+    }
+
+    75% {
+        -webkit-transform: scale(0.9,0.9);
+        opacity: 0.7;
+    }
+
+    100% {
+        -webkit-transform: scale(1,1);
+        opacity: 1;
+    };
+}
+</pre>
+<h2>CSS – Reverse Animation</h2>
+<p>Here is the heart of the experiment. As you have seen before some classes were accompanied by a class “.running”, but now these classes are accompanied by the class “<strong>.reverse</strong>“.</p>
+<p>To function you must copy the properties that were active at the end of the animation “.running” to recreate the animation inverse reversing the parameters. This class will be activated when the button on the tap again. Us remember especially to reset the delay of the animation control layer.</p>
+<pre><span style="color: #999;">/* REVERSE LINE PROPERTIES */</span>
+.reverse .line1,.reverse .line2,.reverse .line3,.reverse .line4 {
+    background: #2187e7;
+    width: 0px;
+    height: 1px;
+    box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    -moz-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+
+.reverse .line1 {
+    -moz-transform: rotate(17deg);
+    -webkit-transform: rotate(17deg);
+    -moz-animation: moveReverse  0.65s linear forwards;
+    -webkit-animation: moveReverse  0.65s linear forwards;
+}
+
+.reverse .line2 {
+    -moz-transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+    -moz-animation: move1Reverse 0.75s linear forwards;
+    -webkit-animation: move1Reverse  0.75s linear forwards;
+}
+
+.reverse .line3 {
+    -moz-transform: rotate(235deg);
+    -webkit-transform: rotate(235deg);
+    -moz-animation: move2Reverse 0.9s linear forwards;
+    -webkit-animation: move2Reverse  0.9s linear forwards;
+}
+
+.reverse .line4 {
+    -moz-transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    -moz-animation: move3Reverse 0.5s linear forwards;
+    -webkit-animation: move3Reverse  0.5s linear forwards;
+}
+
+<span style="color: #999;">/* REVERSE POINT PROPERTIES */</span>
+.reverse .ball, .reverse .ball1, .reverse .ball2, .reverse .ball3 {
+    background-color: #2187e7;
+    background-image: -moz-linear-gradient(90deg, #2187e7 25%, #a0eaff);
+    background-image: -webkit-linear-gradient(90deg, #2187e7 25%, #a0eaff);
+    width: 7px;
+    height: 7px;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 99;
+    -moz-transform: scale(1);
+    -moz-animation: pointReverse 0.1s linear forwards;
+    -webkit-transform: scale(1);
+    -webkit-animation: pointReverse 0.1s linear forwards;
+}
+
+<span style="color: #999;">/* DELAY CONTROL REVERSE */</span>
+.reverse #layerBall, .reverse #layerBall1, .reverse #layerBall2, .reverse #layerBall3 {
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+
+<span style="color: #999;">/* REVERSE LABEL PROPERTIES */</span>
+.reverse ul#social li {
+    position: relative;
+    background: #000000;
+    background: -moz-linear-gradient(top, #161616 0%, #000000 100%);
+    background: -webkit-linear-gradient(top, #161616 0%,#000000 100%);
+    border-left: 1px solid #111;
+    border-top: 1px solid #111;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    width: 70px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.8em;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    width: 70px;
+    opacity: 1;
+}
+
+.reverse #layerSocialControl {
+    -moz-animation: tooltipReverse 0.35s linear forwards;
+    -webkit-animation: tooltipReverse 0.35s linear forwards;
+}
+
+.reverse #layerSocialControl1 {
+    -moz-animation: tooltipReverse 0.35s linear forwards;
+    -webkit-animation: tooltipReverse 0.35s linear forwards;
+}
+
+.reverse #layerSocialControl2 {
+    -moz-animation: tooltipReverse 0.35s linear forwards;
+    -webkit-animation: tooltipReverse 0.35s linear forwards;
+}
+
+.reverse #layerSocialControl3 {
+    -moz-animation: tooltipReverse 0.35s linear forwards;
+    -webkit-animation: tooltipReverse 0.35s linear forwards;
+}
+
+<span style="color: #999;">/* ANIMATION LINE REVERSE */</span>
+@-moz-keyframes moveReverse {
+    0%   { width: 300px;
+}
+
+100% {
+    width: 0px;
+    box-shadow: none;
+}
+}
+
+@-moz-keyframes move1Reverse {
+    0% {
+        width: 360px;
+    }
+
+    100% {
+        width: 0px;
+        box-shadow: none;
+    };
+}
+
+@-moz-keyframes move2Reverse {
+    0% {
+        width: 205px;
+    }
+
+    100% {
+        width: 0px;
+        box-shadow: none;
+    };
+}
+
+@-moz-keyframes move3Reverse {
+    0% {
+        width: 370px;
+    }
+
+    100% {
+        width: 0px;
+        box-shadow: none;
+    };
+}
+
+@-webkit-keyframes moveReverse {
+    0% {
+        width: 300px;
+    }
+
+    100% {
+        width: 0px;
+        box-shadow: none;
+    };
+}
+
+@-webkit-keyframes move1Reverse {
+    0% {
+        width: 360px;
+    }
+
+    100% {
+        width: 0px;
+        box-shadow: none;
+    };
+}
+
+@-webkit-keyframes move2Reverse {
+    0% {
+        width: 205px;
+    }
+
+    100% {
+        width: 0px;
+        box-shadow: none;
+    };
+}
+
+@-webkit-keyframes move3Reverse {
+    0% {
+        width: 370px;
+    }
+
+    100% {
+        width: 0px;
+        box-shadow: none;
+    };
+}
+
+<span style="color: #999;">/* ANIMATION POINTS REVERSE */</span>
+@-moz-keyframes pointReverse {
+    0%  {-moz-transform: scale(1,1);
+}
+
+100% {
+    -moz-transform: scale(0,0);
+}	
+}
+
+@-webkit-keyframes pointReverse {
+    0% {
+        -webkit-transform: scale(1,1);
+    }
+
+    100% {
+        -webkit-transform: scale(0,0);
+    };
+}
+
+<span style="color: #999;">/* ANIMATION LABEL REVERSE */</span>
+@-moz-keyframes tooltipReverse {
+    0%  { -moz-transform: scale(1,1);
+    opacity: 1;
+}
+
+50% {
+    -moz-transform: scale(0.9,0.9);
+    opacity: 0.7;
+}
+
+75% {
+    -moz-transform: scale(1.2,1.2);
+    opacity: 0.3;
+}
+
+100% {
+    -moz-transform: scale(0,0);
+    opacity: 0;
+}
+}
+
+@-webkit-keyframes tooltipReverse {
+    0% {
+        -webkit-transform: scale(1,1);
+        opacity: 1;
+    }
+
+    50% {
+        -webkit-transform: scale(0.9,0.9);
+        opacity: 0.7;
+    }
+
+    75% {
+        -webkit-transform: scale(1.2,1.2);
+        opacity: 0.3;
+    }
+
+    100% {
+        -webkit-transform: scale(0,0);
+        opacity: 0;
+    };
+}
+</pre>
+<h2>jQuery</h2>
+<p>The first step is to call the jQuery file.</p>
+<pre>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+<p>Create a new script tag and insert the code. As you can see this is a very simple script, you just need to change the text dynamically using <strong>.live</strong> method and remove the class <strong>.reverse</strong> and activate the class <strong>.running</strong> and back again.</p>
+<pre>$(document).ready(function() {
+var content = $('.content');
+
+$('#trigger').live('click', function() {
+    $(this).toggle(function() {
+        $(this).text('hide follow!');
+        content.removeClass('reverse').addClass('running');
+    }, function() {
+         $(this).text('follow me!');
+        content.removeClass('running').addClass('reverse');
+    }).trigger('click');
+});
+});
+</pre>
+<h3>Conclusion</h3>
+<p>I hope that this experiment could help discover new ways to reach the same effect. If you find new tips or possible additions please comment.</p>
+		</div>
+	</div>
+</article>
+
+	        <!-- End Article -->
+	    	    		<!-- Social Share -->
+	    		<div class="sharize">
+	    			<h2>Share On</h2>
+	    			<div class="share-list">
+	    				<a href="http://www.alessioatzeni.com/blog/css3-with-jquery-reverse-animation/#" id="share-facebook" class="share-btn col-md-3 dJAX_internal">Facebook</a>
+	    				<a href="http://www.alessioatzeni.com/blog/css3-with-jquery-reverse-animation/#" id="share-twitter" class="share-btn col-md-3 dJAX_internal">Twitter</a>
+	    				<a href="http://www.alessioatzeni.com/blog/css3-with-jquery-reverse-animation/#" id="share-google" class="share-btn col-md-3 dJAX_internal">Google +</a>
+	    				<a href="http://www.alessioatzeni.com/blog/css3-with-jquery-reverse-animation/#" id="share-pinterest" class="share-btn col-md-3 dJAX_internal">Pinterest</a>
+	    			</div>
+	    		</div>
+	    		<!-- End Social Share -->
+
+				<!-- Ads -->
+				
+	    		<div class="ads" style="margin-top: 16207px;">
+	    			<div id="carbonads-container">
+	    				<div class="carbonad">
+	    					<div id="azcarbon"><span><span class="carbonad-image"><a href="http://srv.carbonads.net/ads/click/x/GTND42QICAYIPKJ7CYY4YKQMCKSIT5QJF6AITZ3JCW7I5K3NCWBDLK7KC6BIC27JCABDEK3EHJNCLSIZ?segment=placement:alessioatzenicom;" target="_blank" rel="noopener"><img width="130" height="100" border="0" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/1535592709-Vimeo-Privacy_V2_CarbonAd_2x.png" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span><span class="carbonad-text"><a href="http://srv.carbonads.net/ads/click/x/GTND42QICAYIPKJ7CYY4YKQMCKSIT5QJF6AITZ3JCW7I5K3NCWBDLK7KC6BIC27JCABDEK3EHJNCLSIZ?segment=placement:alessioatzenicom;">Choose who sees your video. More ways to keep videos private. Or not. Learn how.</a></span><span class="carbonad-tag">ads via <a href="http://carbonads.net/?utm_source=alessioatzenicom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" target="_blank" rel="noopener">Carbon</a></span><img src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/B7771473.221505683" border="0" height="1" width="1" style="display: none;"></span></div>
+	    					<script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/57523/azcarbon_2_1_0_VERT"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		
+     <script>
+        function _cookie_block_f_1()
+        {
+            if(upds_getCookie('cookie_notice_accepted') != '')
+            {
+                upds_log('=> Activating code block _cookie_block_1, Type=special_comments'); 
+                window.jQuery('#_cookie_block_1').replaceWith("\n\t    \t\t<div class=\"ads\">\n\t    \t\t\t<div id=\"carbonads-container\">\n\t    \t\t\t\t<div class=\"carbonad\">\n\t    \t\t\t\t\t<div id=\"azcarbon\"><\/div>\n\t    \t\t\t\t\t<script type=\"text\/javascript\">var z = document.createElement(\"script\"); z.type = \"text\/javascript\"; z.async = true; z.src = \"http:\/\/engine.carbonads.com\/z\/57523\/azcarbon_2_1_0_VERT\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(z, s);<\/script>\n\t    \t\t\t\t<\/div>\n\t    \t\t\t<\/div>\n\t    \t\t<\/div>\n\t    \t\t");
+            }
+        }
+        upds_log('Wrapped code block _cookie_block_1, Type=special_comments', '', '\n-----');
+        if(upds_getCookie('cookie_notice_accepted') != '') _cookie_block_f_1();   
+     </script>
+	    		<!-- End Ads -->
+	    		
+    			</div>
+    		</div>
+    	</div>
+	</section>
+
+	<!-- Comment Template -->
+	<section class="comment-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                                    </div>
+            </div>
+        </div>
+    </section>
+	<!-- End Comment Template -->
+
+	<!-- Navigation Area -->
+	<section class="navi-portfolio">
+	    <ul>
+	        <li class="back-portfolio"><a href="http://www.alessioatzeni.com/blog/" title="Back to Blog" class="dJAX_internal">Back to Blog<i class="portfolio-icon"></i></a></li>
+	        <li class="prev"><a href="http://www.alessioatzeni.com/blog/css3-loading-animation-loop-2-set/" rel="next" class="dJAX_internal">Prev<i class="prev-icon"></i></a></li>
+	        <li class="next"><a href="http://www.alessioatzeni.com/blog/css3-graph-animation/" rel="prev" class="dJAX_internal">Next<i class="next-icon"></i></a></li>
+	    </ul>
+	</section>
+	<!-- End Navigation Area -->
+</div>
+
+</div>
+<!-- End Main -->
+
+<!-- Footer -->
+<footer>
+  <!-- Contact -->
+  <div id="contact">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+      <a href="http://www.alessioatzeni.com/privacy-policy/" class="iubenda-nostyle same-url dJAX_internal" title="Privacy Policy">Privacy Policy</a>
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="close-btn"></i></button>
+        <div class="modal-dialog modal-vertical-centered" style="margin-top: -56.5px; margin-left: -300px;">
+          <a href="mailto:info@alessioatzeni.com?subject=New%20Project%20Enquiries%20or%20Saying%20Hello!" class="mail-to">info<span class="color-text">@</span>alessioatzeni.com</a>
+          <nav class="social-profiles">
+            <ul>
+              <li><a href="https://twitter.com/Bluxart" target="_blank" title="Follow Me on Twitter">Twitter</a></li>
+              <li><a href="https://www.facebook.com/atzenialessio" target="_blank" title="Follow Me on Facebook">Facebook</a></li>
+              <li><a href="http://dribbble.com/Bluxart" target="_blank" title="Follow Me on Dribbble">Dribbble</a></li>
+              <li><a href="http://www.behance.net/alessioatzeni" target="_blank" title="Follow Me on Behance">Behance</a></li>
+            </ul>
+          </nav>
+        </div>
+    </div>
+  </div>
+  <!-- End Contact -->
+</footer>
+<!-- End Footer -->
+
+</div>
+<!-- End Wrap All -->
+
+<!-- Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4910263-10', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+
+     <script>
+        function _cookie_block_f_2()
+        {
+            if(upds_getCookie('cookie_notice_accepted') != '')
+            {
+                upds_log('=> Activating code block _cookie_block_2, Type=special_comments'); 
+                window.jQuery('#_cookie_block_2').replaceWith("\n<script>\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n  })(window,document,'script','\/\/www.google-analytics.com\/analytics.js','ga');\n\n  ga('create', 'UA-4910263-10', 'auto');\n  ga('set', 'anonymizeIp', true);\n  ga('send', 'pageview');\n<\/script>\n");
+            }
+        }
+        upds_log('Wrapped code block _cookie_block_2, Type=special_comments', '', '\n-----');
+        if(upds_getCookie('cookie_notice_accepted') != '') _cookie_block_f_2();   
+     </script>
+<!-- End Analytics -->
+
+<script type="text/javascript" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/plugins.js.download"></script>
+<script type="text/javascript" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/main-not-compiled.js.download"></script>
+<script type="text/javascript" src="./CSS3 with jQuery _ Reverse Animation - Alessio Atzeni _ Hybrid Designer &amp; Front-end Developer_files/wp-embed.min.js.download"></script>
+
+			<!-- ### Dynamic Cookie Blocking 2.0 - PROCESSING ### -->
+          <script>
+            function __cookie_policy_enable_all() {
+                var i = 0;
+                while(true) {
+                    i++;
+                    var funcName = '_cookie_block_f_' + i;
+                    if(window[funcName]) { window[funcName](); } else return;
+                }
+            }
+            upds_log('===> ### Dynamic Cookie Blocker 2.0 is ACTIVE () - Autoblock = NO ###');
+            </script>	
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced
+
+ Served from: www.alessioatzeni.com @ 2018-09-17 11:03:37 by W3 Total Cache --></body></html>
